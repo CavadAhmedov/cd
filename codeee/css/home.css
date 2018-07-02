@@ -1,0 +1,704 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+a{
+	text-decoration:none;
+}
+li{
+	list-style-type:none;
+}
+input{
+	outline:none;
+}
+body{
+	background-color:#E9EBEE;
+}
+button{
+	outline:none !important;
+	background-color:rgba(0,0,0,0);
+	border:none;
+}
+/* NAVBAR MINI */
+.navbar-mini{
+	display:none;
+	position: relative;
+	height:60px;
+	background-image:linear-gradient( to right, #00a65a 0%, #0086cd 16%, #873996 37%, #ec3824 62%, #f0812b 82%, #ffc90a 100%);
+	width: 100%;
+}
+
+#miniOpenBtn{
+	top:15px;
+	font-size:22px;
+	left:25px;
+	position: absolute;
+}
+#miniOpenBtn i{
+	color:white;
+}
+#miniSettingBtn{
+	top:15px;
+	right:25px;
+	font-size:22px;
+	position: absolute;
+}
+#miniSettingBtn i{
+	color:white;
+}
+.navbar-mini-list{
+	position: fixed;
+	display: none;
+	top:0;
+	left:0;
+	z-index: 5;
+	height: 100%;
+	width: 100%;
+	background-image:linear-gradient( 45deg, #00a65a 0%, #0086cd 16%, #873996 37%, #ec3824 62%, #f0812b 82%, #ffc90a 100%);
+
+}
+
+.navbar-mini-list li{
+	text-align: center;
+	padding:10px;
+}
+.navbar-mini-list a{
+	color:white;
+	font-size:16px;
+}
+#miniClose{
+	margin-top:20px;
+}
+#miniClose i{
+	color:white;
+	font-size:30px;
+}
+
+
+
+/* NAVBAR */
+#navbar{
+	z-index: 5;
+	width:50px;
+	background-image:linear-gradient( 0deg, #00a65a 0%, #0086cd 16%, #873996 37%, #ec3824 62%, #f0812b 82%, #ffc90a 100%);;
+	position: fixed;
+	height: 100%;
+	top:0;
+	left:0;
+}
+#profileSpan{
+	margin-top:5px;
+}
+#navbar  img {
+	padding:12px;
+	height: 50px;
+	width:50px;
+	border-radius:100%;
+}
+.open{
+	width: 100%;
+	height: 100%;
+}
+#openBtn{
+	z-index: 5;
+	font-size: 25px !important;
+	position: absolute;
+	top:0;
+	right:0;
+}
+#closeBtn{
+	display:none;
+	font-size: 25px !important;
+	position: absolute;
+	top:0;
+	right:0;
+}
+#settingBtn{
+	font-size: 25px !important;
+	position: absolute;
+	bottom:0;
+	right:0;
+}
+#navbar i {
+
+	font-size: 20px;
+	color:white;
+	padding:15px;
+}
+#navbar>ul>li{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+#navbar a{
+	color:white;
+	position: relative;
+}
+#navbar span{
+	top:0;
+	position: absolute;
+	left:-50px;
+	font-size:14px;
+	font-family: 'Noto Sans', sans-serif;
+}
+.grow{
+	animation:1s growclick forwards;
+}
+@keyframes growclick{
+	0%{
+		width:50px;
+	}
+	100%{
+		width:250px;
+	}
+}
+.resize{
+	animation:1s resizeclick forwards;
+}
+@keyframes resizeclick{
+	0%{
+		width:250px;
+	}
+	100%{
+		width: 50px;
+	}
+}
+.moveright{
+	animation:1s mvright forwards , 1s opright forwards;
+}
+
+.moveleft{
+	animation:1s mvleft forwards ,1s opleft forwards;
+
+}
+@keyframes mvleft{
+	0%{
+	
+		left:50px;
+	}
+	100%{
+	
+		left:-50px;
+	}
+}
+@keyframes mvright{
+	0%{
+		left:-50px;
+	}
+	100%{
+		left:50px;
+	}
+}
+@keyframes opright{
+	0%{
+		opacity:0;
+	}
+	50%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+@keyframes opleft{
+	0%{
+		opacity:1;
+	}
+	50%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+/* ESAS SEHIFE */
+
+.homeMain{
+	width: calc(100% - 50px);
+	margin-left:50px;
+}
+
+/* SUAL VERMEK UCUN OLAN YER */
+
+.addQuestion{
+	border:1px solid #D9D9D9;
+	overflow: hidden;
+	border-radius:10px;
+	margin:auto;
+	width: 650px;
+	background-color: white;
+}
+.addQuestionTop{
+	width: 100%;
+	
+}
+.addQuestionLeft{
+	padding-left:10px;
+	padding-top:5px;
+	float: left;
+	width:10%;
+	
+}
+.addQuestionLeft img{
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+}
+.addQuestionRight{
+	padding:10px 15px 5px 0;
+	float:right;
+	width:90%;
+}
+.addQuestionBottom{
+	overflow:hidden;
+	padding:0 10px;
+	height:0;
+	width: 100%;
+}
+#generateQuestion{
+	border:1px solid #D9D9D9;
+	border-radius:10px;
+	width:100%;
+	outline:none;
+	overflow: hidden;
+	resize: none;
+	height:30px;
+}
+#sendQuestion{
+	border-radius:10px;
+	padding:7px 15px;
+	background-image:linear-gradient( 45deg, #00a65a 0%, #0086cd 16%, #873996 37%, #ec3824 62%, #f0812b 82%, #ffc90a 100%);
+	color:white;
+	font-size:14px;
+}
+.resizeQuestionBottom{
+	animation: 1s resizeQuestion forwards;
+}
+@keyframes resizeQuestion{
+	0%{
+		height: 0px;
+	}
+	100%{
+		height:50px;
+	}
+}
+
+
+/* SUALIN DUWDUYU YER */
+.questionHolder{
+	width:650px;
+	margin:auto;
+
+}
+.questionBox{
+	border:1px solid #D9D9D9;
+	overflow: hidden;
+	border-radius: 10px;
+	margin-top:50px;
+	width:100%;
+	background-color:#fff;
+}
+.question{
+	width: 100%;
+	
+
+}
+.questionLeft{
+	padding-top:15px;
+	padding-left:10px;
+	float:left;
+	width:10%;
+}
+.questionLeft img{
+	height:40px;
+	width: 40px;
+	border-radius: 100%;
+}
+.questionRight{
+	width: 90%;
+	float: right;
+}
+.userInformation{
+	padding:23px 15px 15px 0;
+	width: 100%;
+}
+.userInformation > span{
+	color:#828282;
+	padding:10px 10px 10px 0;
+}
+.questionContent{
+	padding-right:20px;
+	width:100%;
+}
+.questionContent > p{
+	color:#828282;
+	margin:0;
+}
+.questionTags{
+	padding:10px 15px 0 0;
+}
+.questionTags > a{
+	padding:3px;
+	background-color: #6a6a6a;
+	color:white;
+	text-decoration: none;
+	margin-top:5px;
+	margin-right:10px;
+	font-size:16px;
+}
+.questionOperations{
+	padding:10px 15px 0 0;
+	width: 100%;
+}
+.questionOperations > a{
+	border-top:1px solid #E9EBEE;
+	border-bottom:1px solid #E9EBEE;
+	text-align: center;
+	background-color: white;
+	color:#828282;
+	height: 40px;
+	width:25%;
+	line-height: 40px;
+	text-decoration: none;
+	cursor: pointer;
+}
+.questionOperations a:hover{
+	transition: 1s;
+	background-color:#E9EBEE;
+}
+
+/* COMMENTLER */
+.commentBox{
+	float: right;
+	width:100%;
+}
+.comment{
+	width:100%;
+}
+.commentLeft{
+	padding:20px 0 0 10px;
+	float: left;
+	width: 10%;
+}
+.commentLeft img{
+	height: 40px;
+	width: 40px;
+	border-radius: 100%;
+}
+.commentRight{
+	width: 90%;
+	float: right;
+	padding:15px 20px 0 10px ;
+}
+.commentContent{
+	position: relative;
+	width: 100%;
+	border-radius:10px;
+	
+}
+.commentContent > ul{
+	margin:0;
+	background-color:#D9D9D9;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+
+}
+.commentContent > ul > li{
+	padding:15px 0 ;
+	margin:0;
+}
+.commentContent > ul > li > a{
+	padding-left:15px;
+	color:#03658c;
+	text-decoration: none;
+}
+.commentContent > ul > li > span {
+	font-size:12px;
+	color:#828282;
+}
+.commentContent > p{
+	background-color:#e9ebee;
+	padding:5px 10px 10px 15px;
+	margin:0;
+	color:#828282;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;	
+}
+
+.commentOperations{
+	padding-right:30px;
+}
+.commentOperations > a{
+	color:#828282;
+	padding:10px 0 5px 20px;
+}
+
+/* Commente Comment */
+
+.commentToCommentBox{
+	width: 100%;
+}
+.commentToComment{
+	width: 100%;
+}
+.commentToCommentLeft{
+	padding:15px 0  0 10px;
+	float:left;
+	width: 10%;
+}
+.commentToCommentLeft img{
+	height: 40px;
+	width: 40px;
+	border-radius: 100%;
+}
+.commentToCommentRight{
+	width:90%;
+	float:right;
+	padding-left:15px;
+	padding-top:10px;
+}
+.commentToCommentContent{
+	position: relative;
+	width:100%;
+	background-color: #e9ebee;
+	border-radius:10px;
+	
+}
+.commentToCommentContent > p{
+	margin:0;
+	padding:5px 10px 10px 15px;
+	color:#828282;
+	
+}
+.commentToCommentContent > ul{
+	margin:0;
+	background-color:#D9D9D9;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+
+}
+.commentToCommentContent > ul > li{
+	padding:15px 0 ;
+	margin:0;
+}
+.commentToCommentContent > ul > li > a{
+	padding-left:15px;
+	color:#03658c;
+	text-decoration: none;
+}
+.commentToCommentContent > ul > li > span {
+	font-size:12px;
+	color:#828282;
+}
+
+.commentToCommentOperations{
+	width:100%;
+	padding:5px 30px 0 0;
+
+}
+.commentToCommentOperations > a{
+	color:#828282;
+}
+
+
+/* COMENTE COMMENT YAZMAQ UCUN YER YER */
+.addCommentToComment{
+	padding-top:20px;
+	float:right;
+	width:100%;
+}
+.addCommentToCommentLeft{
+	padding:5px 0 0 10px;
+	float: left;
+	width: 10%;
+}
+.addCommentToCommentLeft img{
+	height: 40px;
+	width: 40px;
+	border-radius: 100%;
+}
+.addCommentToCommentRight{
+	padding: 10px 0 0 15px ;
+	float: right;
+	width: 90%;
+}
+#generateCommentToComment{
+	border:1px solid #D9D9D9;
+	border-radius:10px;
+	width:100%;
+	outline:none;
+	overflow: hidden;
+	resize: none;
+	height:30px;
+}
+.sendCommentToComment{
+	padding:5px 0 15px 0;
+}
+#sendCommentToCommentBtn{
+	border-radius:10px;
+	padding:7px 15px;
+	background-image:linear-gradient( 45deg, #00a65a 0%, #0086cd 16%, #873996 37%, #ec3824 62%, #f0812b 82%, #ffc90a 100%);
+	color:white;
+	font-size:14px;
+}
+/* COMENT YAZMAQ UCUN OLAN YER */
+.addComment{
+	padding-top:10px;
+	border-top:1px solid #E9EBEE;
+	width:100%;
+	float:right;
+}
+.addCommentLeft{
+	width:10%;
+	float:left;
+	padding:5px 0 0 10px;
+}
+.addCommentLeft img{
+	width:40px;
+	height: 40px;
+	border-radius:100%;
+}
+.addCommentRight{
+	width: 90%;
+	float: right;
+	padding:10px 20px 5px 0;
+}
+#generateComment{
+	border:1px solid #D9D9D9;
+	border-radius:10px;
+	width:100%;
+	outline:none;
+	overflow: hidden;
+	resize: none;
+	height:30px;
+}
+.sendComment{
+	padding: 5px 0 10px 0 ;
+}
+#sendCommentBtn{
+	border-radius:10px;
+	padding:7px 15px;
+	background-image:linear-gradient( 45deg, #00a65a 0%, #0086cd 16%, #873996 37%, #ec3824 62%, #f0812b 82%, #ffc90a 100%);
+	color:white;
+	font-size:14px;
+}
+
+@media only screen and (max-width:700px){
+	#navbar{
+		display: none;
+	}
+	.navbar-mini{
+		z-index:10;
+		width: 100%;
+		position:fixed;
+		display: block;
+		top:0;
+		left:0;
+	}
+	.navbar-mini-list{
+		z-index: 15;
+	}
+	.homeMain{
+		margin:0;
+		width:100%;
+	}
+	.addQuestion{
+		margin-top:75px;
+		width: 100%;
+	}
+	.questionHolder{
+		width: 100%;
+	}
+	.col-md-12{
+		padding: 0;
+	}
+	.addQuestionLeft{
+		padding-top:16px;
+		width: 15%;
+	}
+	.addQuestionLeft img{
+
+		height: 30px;
+		width:30px;
+	}
+	.addQuestionRight{
+		padding:17px 10px 10px 0;
+		width: 85%;
+	}
+	.questionBox{
+		margin-top:25px;
+	}
+	.questionLeft{
+		width: 15%;
+	}
+	.questionRight{
+		width: 85%;
+	}
+	.questionLeft img{
+		height: 30px;
+		width: 30px;
+	}
+	.userInformation{
+		padding:17px 10px 15px 0;
+	}
+	.commentLeft{
+		width: 15%;
+	}
+	.commentLeft img{
+		height: 30px;
+		width: 30px;
+	}
+	.commentRight{
+		width: 85%;
+	}
+	.commentToCommentLeft{
+		padding:15px 0 0 0 ;
+		width:15%;
+	}
+	.commentToCommentLeft img{
+		height: 30px;
+		width: 30px;
+	}
+	.commentToCommentRight{
+		width: 85%;
+	}
+	.addCommentToCommentLeft{
+		padding:10px 0 0 0 ;
+		width: 15%;
+	}
+	.addCommentToCommentLeft img{
+		height: 30px;
+		width: 30px;
+	}
+	.addCommentToCommentRight{
+		padding: 12px 20px 0 0;
+		width: 85%;
+	}
+	.addCommentLeft{
+		padding: 13px 0 0 10px;
+		width:15%;
+	}
+	.addCommentLeft img{
+		height:30px;
+		width: 30px;
+	}
+	.addCommentRight{
+		padding: 14px 20px 10px 0;
+		width: 85%;
+	}
+}
+
+
+
+#triangle{
+	position: absolute;
+	left:-15px;
+	top:20px;
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 7.5px 15px 7.5px 0;
+border-color: transparent #d9d9d9 transparent transparent;
+}

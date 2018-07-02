@@ -1,0 +1,136 @@
+/*  Defaults Start */
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+a{
+	text-decoration:none;
+}
+li{
+	list-style-type:none;
+}
+input{
+	outline:none;
+}
+button{
+	border:none;
+}
+body{
+	background-color: #E9EBEE;
+	font-family: 'Noto Sans', sans-serif;
+}
+.logo{
+	margin:auto;
+	animation: 1s logoLeft forwards;
+	width: 400px;
+	height:200px;
+}
+.logo img{
+	margin:auto;
+	height:70px;
+	width:300px;
+	object-fit: center;
+}
+form{
+
+	padding:0 ;
+	animation: 1s formRight forwards;
+	margin:auto;
+	width:400px;
+	height:400px;
+}
+input[type="checkbox"]{
+	height: 17px;
+  	width: 17px; 
+  	animation: 5s Opacity forwards;
+}
+#email,
+#password{
+	padding-left: 15px;
+	border:none;
+	box-shadow: 2.424px 4.373px 17px 0 rgba(0, 0, 0, 0.14);
+	border-radius: 5px;
+	height:50px;
+	width:100%;
+}
+label[for=email],
+label[for=password]{
+	animation: 6s Opacity forwards;
+	margin-top:5%;
+	color:#A4A5A7;
+	font-size:16px;
+}
+label[for=loggedIn]{
+	animation: 6s Opacity forwards;
+	margin-top:5%;
+	color:#A4A5A7;
+	font-size:15px;
+}
+#btn{
+	box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 15px rgba(0,0,0,.4);
+	width:250px;
+	height: 50px;
+	background-image:linear-gradient( to right, #00a65a 0%, #0086cd 16%, #873996 37%, #ec3824 62%, #f0812b 82%, #ffc90a 100%);
+	color:white;
+	line-height:40px;
+	text-align: center;
+	border-radius:5px;
+	margin-top:20px;
+	margin-left:75px;
+}
+#password:focus{
+	box-shadow: 0 0 10px #2196F3;
+}
+#email:focus{
+	box-shadow: 0 0 10px #2196F3;
+}
+
+
+
+@media only screen and (max-width:500px){
+	.container-fluid{
+		overflow: hidden;
+	}
+	#login{
+		width: 100%;
+	}
+	.col-sm-12{
+		width: 100%;
+	}
+	.logo img{
+		width: 200px;
+		height: 50px;
+	}
+	.logo{
+		width:100%;
+	}
+	.loginForm{
+		width: 100%;
+	}
+	form{
+		margin:auto;
+		width:100%;
+	}
+	#password,
+	#email{
+		animation: none;
+		margin-left:5%;
+		width:90%;
+	}
+	input[type="checkbox"]{
+		margin-left:10%;
+	}
+	label[for=email],
+    label[for=password]{
+    	margin-left:5%;
+    }
+	#btn{
+		margin-left:5%;
+		width:90%;
+	}
+	#login{
+		padding:0;
+	}
+}
